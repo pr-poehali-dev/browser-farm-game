@@ -1,0 +1,58 @@
+import { Achievement } from '@/types/game';
+
+export const ACHIEVEMENTS: Achievement[] = [
+  {
+    id: 'first_harvest',
+    name: 'Первый урожай',
+    description: 'Соберите первый урожай',
+    icon: '🌾',
+    condition: { type: 'crops_harvested', value: 1 },
+    reward: { coins: 50, experience: 10 },
+    unlocked: false,
+  },
+  {
+    id: 'experienced_farmer',
+    name: 'Опытный фермер',
+    description: 'Соберите 50 урожаев',
+    icon: '👨‍🌾',
+    condition: { type: 'crops_harvested', value: 50 },
+    reward: { coins: 500, experience: 100, gems: 5 },
+    unlocked: false,
+  },
+  {
+    id: 'animal_lover',
+    name: 'Любитель животных',
+    description: 'Соберите продукцию от животных 25 раз',
+    icon: '🐄',
+    condition: { type: 'animals_collected', value: 25 },
+    reward: { coins: 300, experience: 75, gems: 3 },
+    unlocked: false,
+  },
+  {
+    id: 'rich_farmer',
+    name: 'Богатый фермер',
+    description: 'Заработайте 10000 монет',
+    icon: '💰',
+    condition: { type: 'coins_earned', value: 10000 },
+    reward: { experience: 200, gems: 10 },
+    unlocked: false,
+  },
+  {
+    id: 'level_10',
+    name: 'Мастер фермы',
+    description: 'Достигните 10 уровня',
+    icon: '⭐',
+    condition: { type: 'level_reached', value: 10 },
+    reward: { coins: 1000, gems: 20 },
+    unlocked: false,
+  },
+  {
+    id: 'merchant',
+    name: 'Торговец',
+    description: 'Продайте 100 товаров',
+    icon: '🛒',
+    condition: { type: 'products_sold', value: 100 },
+    reward: { coins: 800, experience: 150, gems: 8 },
+    unlocked: false,
+  },
+];
